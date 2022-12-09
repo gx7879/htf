@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+a {
+  @apply text-blue-500 transition-all;
+}
+
+table th {
+  @apply hidden bg-black/50 px-5 py-2 text-left lg:table-cell;
+}
+
+table td {
+  @apply grid p-2.5 text-left odd:pt-5 even:pb-5 lg:table-cell lg:px-5 lg:py-2;
+}
+
+table td:before {
+  @apply mb-[5px] text-left text-white/50 content-[attr(data-title)] lg:content-none;
+}

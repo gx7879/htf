@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./src/assets/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body class="bg-[#1E1E1E] text-white">
+    <div id="app" class="text-center selection:bg-green-100">
+      <div class="w-full">
+        <div
+          class="fixed top-0 w-full overflow-hidden bg-black/50 backdrop-blur-[10px]"
+        >
+          <!-- <div
+            class="flex max-h-10 flex-wrap items-start justify-center bg-black/50 backdrop-blur-[10px] duration-75"
+          > -->
+          <div
+            id="header"
+            class="grid max-h-10 auto-cols-fr grid-rows-[40px,1fr] items-center justify-center transition-all duration-100 lg:mx-auto lg:max-h-[75px] lg:max-w-[1200px] lg:grid-cols-[150px,auto] lg:grid-rows-[75px] lg:justify-between"
+          >
+            <img
+              class="mx-auto w-[90px] lg:w-[150px]"
+              src="./src/assets/images/logo.png"
+              alt=""
+            />
+            <div
+              id="menu"
+              class="top-full w-full px-2.5 pb-5 lg:flex lg:space-x-[30px] lg:pb-0"
+            >
+              <ul class="mb-2.5 lg:mb-0 lg:flex lg:space-x-[30px]">
+                <li class="py-2.5">活動介紹</li>
+                <li class="py-2.5">活動資訊</li>
+                <li class="py-2.5">玩法攻略</li>
+                <li class="py-2.5">購票種類</li>
+                <li class="py-2.5">相關活動</li>
+                <li class="py-2.5">合作夥伴</li>
+              </ul>
+              <a
+                href="#"
+                class="block w-full rounded-full bg-[#FFEE00] py-2.5 text-lg font-bold text-black lg:w-auto lg:px-7"
+              >
+                註冊/登入
+              </a>
+            </div>
+            <div
+              id="menu-btn"
+              class="absolute right-1.5 top-1.5 cursor-pointer lg:hidden"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                class="h-7 w-7 stroke-white"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
+              </svg>
+            </div>
+          </div>
+          <!-- <div
+            id="menu"
+            class="absolute top-full left-0 right-0 hidden bg-black/50 px-2.5 pb-5 backdrop-blur-[10px]"
+          >
+            <ul class="mb-2.5">
+              <li class="py-2.5">活動介紹</li>
+              <li class="py-2.5">活動資訊</li>
+              <li class="py-2.5">玩法攻略</li>
+              <li class="py-2.5">購票種類</li>
+              <li class="py-2.5">相關活動</li>
+              <li class="py-2.5">合作夥伴</li>
+            </ul>
+            <a
+              href="#"
+              class="block w-full rounded-full bg-[#FFEE00] py-2.5 text-lg font-bold text-black"
+            >
+              註冊/登入
+            </a>
+          </div> -->
+        </div>
+        <div
+          class="aspect-[4/3] w-full bg-[url(./src/assets/images/banner_mo.jpg)] bg-cover lg:aspect-[2.4/1] lg:bg-[url(./src/assets/images/banner_desk.jpg)]"
+        ></div>
+      </div>
+      <div class="py-[30px] px-5 lg:mx-auto lg:max-w-[1200px] lg:py-20">
+        <div class="mb-20">
+          <div
+            class="mb-[30px] flex flex-wrap items-center justify-center text-2xl font-bold text-[#00FF75]"
+          >
+            2022
+            <img
+              class="mx-2 h-4"
+              src="./src/assets/images/logo-nft_taipei.png"
+              alt=""
+            />
+            期間
+            <br />
+            <span class="mt-2 block w-full text-white">
+              絕不可錯過的精彩活動
+            </span>
+          </div>
+          <p class="text-left text-lg lg:mx-auto lg:max-w-[738px]">
+            現在購買活動票券，不僅能與好友們共同體驗飲酒文化，還有機會獲得
+            <span class="text-[#FFEE00]">限量版《藝飲而浸 NFT》</span
+            >。每位玩家在活動限定酒吧所點的調酒、做出的選擇，都能成為行為藝術創作的一部分，讓
+            NFT 樣貌產生改變！<br />《藝飲而浸 NFT》為期間限定，限量 886
+            份，VVIP 及 VIP 套票持有者，可獲得免費空投；購買 HTF
+            套票者，則可參與抽獎，有機會拿到獨一無二的《藝飲而浸 NFT》！
+          </p>
+        </div>
+        <div class="gap-[50px] lg:grid lg:grid-cols-[2fr,3fr] lg:gap-[100px]">
+          <div class="mb-[50px] lg:mb-0">
+            <div class="mb-[30px] text-[32px] lg:text-left">活動資訊</div>
+            <div class="mb-[30px] lg:flex lg:space-x-5">
+              <div
+                class="mb-2.5 h-10 bg-black leading-10 lg:w-[120px] lg:flex-shrink-0"
+              >
+                活動日期
+              </div>
+              <div class="text-lg leading-10">2022/12/9 (五) - 12/18 (日)</div>
+            </div>
+            <div class="mb-[30px] lg:flex lg:space-x-5">
+              <div
+                class="mb-2.5 h-10 bg-black leading-10 lg:w-[120px] lg:flex-shrink-0"
+              >
+                活動地點
+              </div>
+              <div class="text-lg leading-10">活動期間指定名單中的各個酒吧</div>
+            </div>
+            <div class="mb-[30px] lg:flex lg:space-x-5">
+              <div
+                class="mb-2.5 h-10 bg-black leading-10 lg:w-[120px] lg:flex-shrink-0"
+              >
+                活動玩法
+              </div>
+              <div class="text-left text-lg leading-10">
+                活動期間共有三種玩法，讓你盡情享受飲酒樂趣之餘，還有機會獲得多項好禮！
+              </div>
+            </div>
+            <a
+              href="#"
+              class="block w-full rounded-full bg-[#FFEE00] py-2.5 text-lg font-bold text-black"
+            >
+              我要看玩法攻略
+            </a>
+          </div>
+          <div>
+            <div id="dropdown" class="relative h-10 bg-black leading-10">
+              <span class="lg:hidden"> 點我看活動指定酒吧名單 </span>
+              <span class="hidden lg:block"> 活動指定酒吧名單 </span>
+              <div class="absolute top-1/2 right-5 -translate-y-1/2 lg:hidden">
+                <svg
+                  id="arrow"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xml:space="preserve"
+                  viewBox="0 0 386.257 386.257"
+                  class="h-2.5 w-4 origin-center fill-white transition duration-75 will-change-transform"
+                >
+                  <path d="m0 96.879 193.129 192.5 193.128-192.5z" />
+                </svg>
+              </div>
+            </div>
+            <div id="list" class="relative hidden lg:block">
+              <table class="w-full">
+                <tr>
+                  <th>酒吧名稱</th>
+                  <th>酒吧地址</th>
+                </tr>
+                <tr class="border-t">
+                  <td data-title="酒吧名稱" class="tex-left">
+                    Drunk Play 爛醉不累
+                  </td>
+                  <td data-title="酒吧地址" class="tex-left">
+                    台北市信義區松壽路12號11樓
+                  </td>
+                </tr>
+                <tr class="border-t">
+                  <td data-title="酒吧名稱" class="tex-left">
+                    Drunk Play 爛醉不累
+                  </td>
+                  <td data-title="酒吧地址" class="tex-left">
+                    台北市信義區松壽路12號11樓
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-black/20">
+        <div
+          class="max-w-[1200px] gap-[50px] py-[50px] px-5 lg:mx-auto lg:grid lg:grid-cols-[2fr,3fr] lg:items-center lg:py-20"
+        >
+          <div class="lg:text-left">
+            <div
+              class="mb-[30px] text-left text-[32px] font-bold tracking-widest"
+            >
+              <span class="block text-2xl">玩法攻略（一）</span>
+              藝起玩行為藝術 - 投票創作 NFT
+            </div>
+            <p class="mb-[30px] text-left">
+              每間酒吧各代表一種圖騰，於每日競賽中勝出的酒吧所代表的圖騰，會成為《藝飲而浸
+              NFT》生成的元素之一。
+            </p>
+            <a
+              href="#"
+              class="block w-full rounded-full bg-[#FFEE00] py-2.5 text-lg font-bold text-black lg:inline-block lg:w-auto lg:px-10 lg:py-2.5"
+            >
+              我想參與創作 NFT
+            </a>
+          </div>
+          <div>
+            <div class="mx-auto mt-4 rounded">
+              <!-- Tabs -->
+              <ul id="tabs" class="inline-flex w-full border-b pt-2">
+                <li class="w-1/2 bg-black px-4 py-2 font-semibold">
+                  <a
+                    id="default-tab"
+                    href="#first"
+                    class="text-white hover:no-underline focus:text-white active:text-white"
+                  >
+                    投票攻略
+                  </a>
+                </li>
+                <li
+                  class="w-1/2 rounded-t px-4 py-2 font-semibold text-gray-800"
+                >
+                  <a
+                    href="#second"
+                    class="text-white hover:no-underline focus:text-white active:text-white"
+                  >
+                    VIP 專屬攻略
+                  </a>
+                </li>
+              </ul>
+
+              <!-- Tab Contents -->
+              <div id="tab-contents" class="text-left leading-[27px]">
+                <div id="first" class="py-[30px]">
+                  【投票資格】<br />凡是購買「500 元套票」及「50
+                  元零售票」的玩家，皆可憑內附的「投票活動專用投票券」參與每日的投票活動。
+                  <br /><br />
+                  【投票規則】<br />
+                  <ul class="list-disc pl-4">
+                    <li>
+                      系統將會從參與活動的酒吧名單中，每日隨機抽出 A、B
+                      兩間進行比賽，玩家可使用「投票券」來預測這兩間酒吧，誰的「當日兌換酒水杯數」總數最多，即為勝出。
+                    </li>
+                    <li>
+                      從 12/9
+                      起為第一天，每日皆可投票一次、每三天為一輪結算週期，共結算三輪。
+                    </li>
+                    <li>
+                      猜對的玩家將可獲得 100 元折抵券，猜錯也能獲得 50
+                      元折抵券。每一輪投票的第三天，將會公布當輪玩家個人累積的總折抵金額，所有玩家皆可在
+                      HTF 的系統中查詢自己獲得的折抵券紀錄。
+                    </li>
+                    <li>
+                      每一輪投票的第四天起，可前往最近三天內曾去過的酒吧使用「酒水折抵券」進行消費兌換，每一輪折抵券使用期限為兩天。
+                    </li>
+                    <li>
+                      <span class="text-[#FFEE00]"
+                        >持續參與在活動中並消費，將有機會解鎖隱藏版數位徽章唷！</span
+                      >
+                    </li>
+                  </ul>
+                  <br />
+                  【獎品】凡參加投票者，皆有機會獲得：<br />
+                  <ul class="list-decimal pl-4">
+                    <li>免費酒水兌換券</li>
+                    <li>100 元酒水折抵券</li>
+                    <li>50 元酒水折抵券</li>
+                  </ul>
+                </div>
+                <div id="second" class="hidden py-[30px]">
+                  持有兌換券的 VIP 貴賓可以透過發送手上的兌換券、折抵券，至 A 跟
+                  B 酒吧兌換杯數，以確保自己想要的圖騰會出現於最終將獲得的 NFT
+                  當中
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-black/40">
+        <div
+          class="max-w-[858px] py-20 px-5 lg:mx-auto lg:grid lg:grid-cols-[repeat(2,auto)] lg:justify-between lg:gap-[50px]"
+        >
+          <div class="mb-[30px]">
+            <div
+              class="mb-[30px] text-left text-[32px] font-bold tracking-widest"
+            >
+              <span class="block text-2xl">玩法攻略（二）</span>
+              藝起來抽獎 - 喝越多省越多
+            </div>
+            <div class="text-left leading-[27px]">
+              【抽獎資格】<br />
+              <ul class="list-decimal pl-4">
+                <li>
+                  於週日到週四裡，單日消費滿兩杯酒，即可獲得一次抽獎機會。
+                </li>
+                <li>
+                  於週五、週六裡，單日消費滿三杯酒，即可獲得一次抽獎機會。
+                </li>
+              </ul>
+              <br />
+              【獎品】凡參加抽獎者，皆有機會獲得：<br />
+              <ul class="list-decimal pl-4">
+                <li>活動限定《886 NFT》</li>
+                <li>免費酒水兌換券</li>
+                <li>100 元酒水折抵券</li>
+                <li>50 元酒水折抵券</li>
+                <li>其他隱藏獎品</li>
+              </ul>
+              <br />
+              【注意事項】<br />
+              消費杯數的系統計算時間為「每日下午 4 點至隔日早上 6 點」。
+            </div>
+          </div>
+          <div class="lg:-order-1">
+            <img
+              class="mx-auto lg:w-[250px]"
+              src="./src/assets/images/pic-01.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+      <div class="bg-black/60">
+        <div
+          class="max-w-[858px] py-20 px-5 lg:mx-auto lg:grid lg:grid-cols-[repeat(2,auto)] lg:justify-between lg:gap-[50px]"
+        >
+          <div class="mb-[30px]">
+            <div
+              class="mb-[30px] text-left text-[32px] font-bold tracking-widest"
+            >
+              <span class="block text-2xl">玩法攻略（三）</span>
+              藝起解鎖副本 - 收集數位徽章
+            </div>
+            <div class="text-left leading-[27px]">
+              本活動加碼推出神秘的隱藏副本任務「20
+              種數位徽章」，每一種徽章都有各自的達成條件，但條件在解鎖之前是不公開的，且每一種徽章只能獲得一次。只有當某一位玩家領先所有人達成條件，才會解鎖並公開此徽章及其獲取條件！
+              <br /><br />
+              【解鎖獎勵】<br />
+              <ul class="list-decimal pl-4">
+                <li>
+                  每一種徽章的首位解鎖玩家，可獲得「免費酒水兌換券」一張。
+                </li>
+                <li>
+                  非首位但仍有達成條件獲得徽章的玩家，每一種徽章可獲得「50
+                  元酒水折抵券」一張。
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <img
+              class="mx-auto lg:w-[250px]"
+              src="./src/assets/images/pic-02.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+      <div class="px-5 py-[50px] lg:py-20">
+        <div class="lg:mx-auto lg:max-w-[1200px]">
+          <div class="mb-[50px] text-[32px]">購票種類</div>
+          <div
+            class="mb-[50px] grid gap-[30px] lg:grid-cols-[repeat(3,370px)] lg:justify-center"
+          >
+            <div class="border">
+              <img
+                class="h-[208px] object-cover"
+                src="./src/assets/images/ticket-01.jpg"
+                alt=""
+              />
+              <div class="px-2.5 py-[15px] text-left font-bold">
+                <h6 class="mb-2.5">HTF & NFT Taipei VIP Party 套票組 VVIP</h6>
+                <div class="text-2xl">TWD $ 8,866</div>
+              </div>
+            </div>
+            <div class="border">
+              <img
+                class="h-[208px] object-cover"
+                src="./src/assets/images/ticket-02.jpg"
+                alt=""
+              />
+              <div class="px-2.5 py-[15px] text-left font-bold">
+                <h6 class="mb-2.5">HTF & NFT Taipei 套票組 VIP</h6>
+                <div class="text-2xl">TWD $ 4,800</div>
+              </div>
+            </div>
+            <div class="border">
+              <img
+                class="h-[208px] object-cover"
+                src="./src/assets/images/ticket-03.jpg"
+                alt=""
+              />
+              <div class="px-2.5 py-[15px] text-left font-bold">
+                <h6 class="mb-2.5">HTF VIP</h6>
+                <div class="text-2xl">TWD $ 4,800</div>
+              </div>
+            </div>
+            <div class="border">
+              <img
+                class="h-[208px] object-cover"
+                src="./src/assets/images/ticket-04.jpg"
+                alt=""
+              />
+              <div class="px-2.5 py-[15px] text-left font-bold">
+                <h6 class="mb-2.5">HTF 500元套票</h6>
+                <div class="text-2xl">TWD $ 500</div>
+              </div>
+            </div>
+            <div class="border">
+              <img
+                class="h-[208px] object-cover"
+                src="https://fakeimg.pl/370x208/?text=$ 50"
+                alt=""
+              />
+              <div class="px-2.5 py-[15px] text-left font-bold">
+                <h6 class="mb-2.5">HTF 50元零售票 (僅限12/9販售)</h6>
+                <div class="text-2xl">TWD $ 50</div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="space-y-5 lg:flex lg:justify-center lg:space-y-0 lg:space-x-4"
+          >
+            <a
+              href="#"
+              class="block w-full rounded-full bg-[#FFEE00] py-2.5 text-lg font-bold text-black lg:inline-block lg:w-auto lg:px-10"
+            >
+              前往 Halfway 購票
+            </a>
+            <a
+              href="https://www.accupass.com/event/2211301633581920355551?utm_source=android_accupass&utm_medium=share_1471005548999&utm_campaign=accu_e"
+              class="block w-full rounded-full bg-[#FFEE00] py-2.5 text-lg font-bold text-black lg:inline-block lg:w-auto lg:px-10"
+            >
+              前往 Accupass 購票
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="bg-black px-5 py-[50px] lg:py-[100px]">
+        <div
+          class="lg:mx-auto lg:grid lg:max-w-[1200px] lg:grid-cols-2 lg:items-center lg:gap-[30px]"
+        >
+          <div class="mb-[30px] lg:mb-0 lg:text-left">
+            <div class="mb-[30px]">
+              <p class="mb-2.5 text-lg">不容錯過的 NFT 盛會</p>
+              <img
+                class="lg:w-[304px]"
+                src="./src/assets/images/logo-nft_taipei.png"
+                alt=""
+              />
+            </div>
+            <p class="mb-[30px] text-left leading-7">
+              2022 亞洲最大的 NFT 嘉年華 NFT Taipei 即將在 12/09 -12/18
+              於台北多點隆重登場！共分【OneOffsNFT 國際藝術博覽會】、【NFT
+              Taipei 國際論壇】及【NFT 玩
+              Taipei】三大盛會，集結上百位最有影響力的新銳藝術家、潮流人士、藍籌
+              NFT 項目，共同打造多重維度的 NFT 藝術體驗，推動台灣 NFT
+              生態圈和全世界接軌。<br />活動期間還會有 20
+              場以上的衛星活動，以及上百個台北本地商家進行 NFT
+              賦能串聯，預估參觀人次將超過 10 萬人！
+            </p>
+            <a
+              href="https://www.nft-taipei.com/"
+              class="block w-full rounded-full bg-[#FFEE00] py-2.5 text-lg font-bold text-black lg:inline-block lg:w-auto lg:px-10"
+            >
+              更多活動資訊
+            </a>
+          </div>
+          <div>
+            <img src="./src/assets/images/pic-03.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="px-5 py-[50px] lg:py-20">
+        <div class="mb-[50px] text-[32px]">媒體報導</div>
+        <div class="grid gap-[30px] lg:grid-cols-3">
+          <a
+            href="https://abmedia.io/20221201-nft-taipei-event"
+            class="text-white"
+          >
+            <div class="border px-2.5 py-5 lg:flex lg:items-center lg:py-4">
+              <img
+                class="mx-auto mb-2.5 w-20 object-cover lg:mr-2.5 lg:mb-0"
+                src="./src/assets/images/report_logo-01.png"
+                alt=""
+              />
+              <div class="text-left font-bold">
+                <div class="text-lg">
+                  【鏈新聞】Vitalik將現身《NFT Taipei》暢談Web
+                  3、百組藝術家開創元宇宙進化論
+                </div>
+              </div>
+            </div>
+          </a>
+          <a
+            class="text-white"
+            href="https://www.inside.com.tw/amparticle/29938-NFT-Taipei-Vitalik-Buterin"
+          >
+            <div class="border px-2.5 py-5 lg:flex lg:items-center lg:py-4">
+              <img
+                class="mx-auto mb-2.5 w-20 object-cover lg:mr-2.5 lg:mb-0"
+                src="./src/assets/images/report_logo-02.png"
+                alt=""
+              />
+              <div class="text-left font-bold">
+                <div class="text-lg">
+                  【INSIDE】Vitalik Buterin 加入《NFT
+                  Taipei》行列！百組藝術家開創 Metaverse 進化論
+                </div>
+              </div>
+            </div>
+          </a>
+          <a
+            class="text-white"
+            href="https://www.gq.com.tw/life/article/nft-taipei-highlight/amp"
+          >
+            <div class="border px-2.5 py-5 lg:flex lg:items-center lg:py-4">
+              <img
+                class="mx-auto mb-2.5 w-20 object-cover lg:mr-2.5 lg:mb-0"
+                src="./src/assets/images/report_logo-03.png"
+                alt=""
+              />
+              <div class="text-left font-bold">
+                <div class="text-lg">
+                  【GQ】重磅嘉賓解鎖！V神、馮德倫宣布加入《NFT
+                  Taipei》，活動亮點一次看
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="bg-black/50">
+        <div
+          class="space-y-[50px] py-[50px] px-5 lg:mx-auto lg:max-w-[1200px] lg:py-20"
+        >
+          <div>
+            <div class="mb-5 text-lg tracking-widest lg:text-left">
+              執行單位
+            </div>
+            <div
+              class="grid grid-cols-2 gap-x-10 lg:auto-cols-auto lg:grid-cols-[repeat(auto-fill,minmax(100px,auto))]"
+            >
+              <img
+                class="mx-auto w-[120px] lg:w-[100px]"
+                src="./src/assets/images/logo-chillnow.png"
+                alt=""
+              />
+              <img
+                class="mx-auto w-[120px] lg:w-[100px]"
+                src="./src/assets/images/logo-halfway.png"
+                alt=""
+              />
+              <img
+                class="mx-auto w-[120px] lg:w-[100px]"
+                src="./src/assets/images/logo-giDAO.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div>
+            <div class="mb-5 text-lg tracking-widest lg:text-left">
+              合作夥伴
+            </div>
+            <div
+              class="grid grid-cols-2 gap-x-10 lg:grid-cols-[repeat(auto-fill,minmax(100px,auto))]"
+            >
+              <img
+                class="mx-auto lg:w-[100px]"
+                src="./src/assets/images/logo-redreamer.png"
+                alt=""
+              />
+              <img
+                class="mx-auto lg:w-[100px]"
+                src="./src/assets/images/logo-oasis.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div>
+            <div class="mb-5 text-lg tracking-widest lg:text-left">贊助商</div>
+            <div
+              class="grid grid-cols-2 gap-x-10 lg:grid-cols-[repeat(auto-fill,minmax(100px,auto))]"
+            >
+              <img
+                class="mx-auto lg:w-[100px]"
+                src="./src/assets/images/logo-redreamer.png"
+                alt=""
+              />
+              <img
+                class="mx-auto lg:w-[100px]"
+                src="./src/assets/images/logo-oasis.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div>
+            <div class="mb-5 text-lg tracking-widest lg:text-left">
+              參與店家
+            </div>
+            <div
+              class="grid grid-cols-2 gap-x-10 lg:grid-cols-[repeat(auto-fill,minmax(100px,auto))]"
+            >
+              <img
+                class="mx-auto lg:w-[100px]"
+                src="./src/assets/images/logo-redreamer.png"
+                alt=""
+              />
+              <img
+                class="mx-auto lg:w-[100px]"
+                src="./src/assets/images/logo-oasis.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-black pt-[30px]">
+        Copyright © 2022 Halfway Studio &<span class="block lg:hidden"></span>
+        CillNoW. All rights reserved.
+      </div>
+    </div>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
