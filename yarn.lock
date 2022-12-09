@@ -284,6 +284,11 @@
   "resolved" "https://registry.npmjs.org/isexe/-/isexe-2.0.0.tgz"
   "version" "2.0.0"
 
+"jump.js@^1.0.2":
+  "integrity" "sha512-oUkJJ/Y4ATU5qjkXBntCZSKctbSyS3ewe2jrLaUu/cc9jsQiAn0fnTUxQnZz3mJdDdem1Q279zrD6h3n+Cgxtg=="
+  "resolved" "https://registry.npmjs.org/jump.js/-/jump.js-1.0.2.tgz"
+  "version" "1.0.2"
+
 "lilconfig@^2.0.5", "lilconfig@^2.0.6":
   "integrity" "sha512-9JROoBW7pobfsx+Sq2JsASvCo6Pfo6WWoUW79HuB1BCoBXD4PLWJPqDF6fNj67pqBYTbAHkE57M1kS/+L1neOg=="
   "resolved" "https://registry.npmjs.org/lilconfig/-/lilconfig-2.0.6.tgz"
@@ -483,6 +488,13 @@
   "integrity" "sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A=="
   "resolved" "https://registry.npmjs.org/shebang-regex/-/shebang-regex-3.0.0.tgz"
   "version" "3.0.0"
+
+"simple-scrollspy@^2.3.3":
+  "integrity" "sha512-i5porcWYhG29fnRBh9gDAChNwzCtaVm+6G6hNAy0edIumzbzbSI2tc7iQj2S+wKy6dYLvcoIOTIKw8TzQcI0VQ=="
+  "resolved" "https://registry.npmjs.org/simple-scrollspy/-/simple-scrollspy-2.3.3.tgz"
+  "version" "2.3.3"
+  optionalDependencies:
+    "jump.js" "^1.0.2"
 
 "source-map-js@^1.0.2":
   "integrity" "sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw=="

@@ -1,4 +1,5 @@
 import "./index.css";
+import scrollSpy from "simple-scrollspy";
 
 const dropdown = document.getElementById("dropdown");
 const arrow = document.getElementById("arrow");
@@ -59,3 +60,18 @@ menuBtn.addEventListener("click", () => {
     header.style.removeProperty("max-height");
   }
 });
+
+// window.onload = function () {
+scrollSpy("#main-menu", {
+  sectionClass: ".scrollspy",
+  menuActiveTarget: ".menu-item",
+  offset: 100,
+  // scrollContainer: null,
+  // smooth scroll
+  smoothScroll: true,
+  // smoothScrollBehavior: function (element) {
+  //   // console.log('run "smoothScrollBehavior"...', element);
+  //   element.scrollIntoView({ behavior: "smooth" });
+  // },
+});
+// };

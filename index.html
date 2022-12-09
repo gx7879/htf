@@ -10,7 +10,7 @@
     <div id="app" class="text-center selection:bg-green-100">
       <div class="w-full">
         <div
-          class="fixed top-0 w-full overflow-hidden bg-black/50 backdrop-blur-[10px]"
+          class="fixed top-0 z-10 w-full overflow-hidden bg-black/50 backdrop-blur-[10px]"
         >
           <!-- <div
             class="flex max-h-10 flex-wrap items-start justify-center bg-black/50 backdrop-blur-[10px] duration-75"
@@ -28,14 +28,29 @@
               id="menu"
               class="top-full w-full px-2.5 pb-5 lg:flex lg:space-x-[30px] lg:pb-0"
             >
-              <ul class="mb-2.5 lg:mb-0 lg:flex lg:space-x-[30px]">
-                <li class="py-2.5">活動介紹</li>
-                <li class="py-2.5">活動資訊</li>
-                <li class="py-2.5">玩法攻略</li>
-                <li class="py-2.5">購票種類</li>
-                <li class="py-2.5">相關活動</li>
-                <li class="py-2.5">合作夥伴</li>
-              </ul>
+              <nav
+                id="main-menu"
+                class="mb-2.5 lg:mb-0 lg:flex lg:space-x-[30px]"
+              >
+                <div class="py-2.5">
+                  <a class="menu-item text-white" href="#intro">活動介紹</a>
+                </div>
+                <div class="py-2.5">
+                  <a class="menu-item text-white" href="#info">活動資訊</a>
+                </div>
+                <div class="py-2.5">
+                  <a class="menu-item text-white" href="#play">玩法攻略</a>
+                </div>
+                <div class="py-2.5">
+                  <a class="menu-item text-white" href="#type">購票種類</a>
+                </div>
+                <div class="py-2.5">
+                  <a class="menu-item text-white" href="#related">相關活動</a>
+                </div>
+                <div class="py-2.5">
+                  <a class="menu-item text-white" href="#partner">合作夥伴</a>
+                </div>
+              </nav>
               <a
                 href="#"
                 class="block w-full rounded-full bg-[#FFEE00] py-2.5 text-lg font-bold text-black lg:w-auto lg:px-7"
@@ -63,31 +78,15 @@
               </svg>
             </div>
           </div>
-          <!-- <div
-            id="menu"
-            class="absolute top-full left-0 right-0 hidden bg-black/50 px-2.5 pb-5 backdrop-blur-[10px]"
-          >
-            <ul class="mb-2.5">
-              <li class="py-2.5">活動介紹</li>
-              <li class="py-2.5">活動資訊</li>
-              <li class="py-2.5">玩法攻略</li>
-              <li class="py-2.5">購票種類</li>
-              <li class="py-2.5">相關活動</li>
-              <li class="py-2.5">合作夥伴</li>
-            </ul>
-            <a
-              href="#"
-              class="block w-full rounded-full bg-[#FFEE00] py-2.5 text-lg font-bold text-black"
-            >
-              註冊/登入
-            </a>
-          </div> -->
         </div>
         <div
           class="aspect-[4/3] w-full bg-[url(./src/assets/images/banner_mo.jpg)] bg-cover lg:aspect-[2.4/1] lg:bg-[url(./src/assets/images/banner_desk.jpg)]"
         ></div>
       </div>
-      <div class="py-[30px] px-5 lg:mx-auto lg:max-w-[1200px] lg:py-20">
+      <div
+        class="scrollspy scroll-m-10 py-[30px] px-5 lg:mx-auto lg:max-w-[1200px] lg:scroll-m-[75px] lg:py-20"
+        id="intro"
+      >
         <div class="mb-20">
           <div
             class="mb-[30px] flex flex-wrap items-center justify-center text-2xl font-bold text-[#00FF75]"
@@ -113,7 +112,10 @@
             套票者，則可參與抽獎，有機會拿到獨一無二的《藝飲而浸 NFT》！
           </p>
         </div>
-        <div class="gap-[50px] lg:grid lg:grid-cols-[2fr,3fr] lg:gap-[100px]">
+        <div
+          id="info"
+          class="scrollspy scroll-m-10 gap-[50px] lg:grid lg:scroll-m-[75px] lg:grid-cols-[2fr,3fr] lg:gap-[100px]"
+        >
           <div class="mb-[50px] lg:mb-0">
             <div class="mb-[30px] text-[32px] lg:text-left">活動資訊</div>
             <div class="mb-[30px] lg:flex lg:space-x-5">
@@ -143,8 +145,8 @@
               </div>
             </div>
             <a
-              href="#"
-              class="block w-full rounded-full bg-[#FFEE00] py-2.5 text-lg font-bold text-black"
+              onclick="document.querySelector(`[href='#play']`).click()"
+              class="block w-full cursor-pointer rounded-full bg-[#FFEE00] py-2.5 text-lg font-bold text-black"
             >
               我要看玩法攻略
             </a>
@@ -192,7 +194,10 @@
           </div>
         </div>
       </div>
-      <div class="bg-black/20">
+      <div
+        class="scrollspy scroll-m-10 bg-black/20 lg:scroll-m-[75px]"
+        id="play"
+      >
         <div
           class="max-w-[1200px] gap-[50px] py-[50px] px-5 lg:mx-auto lg:grid lg:grid-cols-[2fr,3fr] lg:items-center lg:py-20"
         >
@@ -208,8 +213,8 @@
               NFT》生成的元素之一。
             </p>
             <a
-              href="#"
-              class="block w-full rounded-full bg-[#FFEE00] py-2.5 text-lg font-bold text-black lg:inline-block lg:w-auto lg:px-10 lg:py-2.5"
+              onclick="document.querySelector(`[href='#type']`).click()"
+              class="block w-full cursor-pointer rounded-full bg-[#FFEE00] py-2.5 text-lg font-bold text-black lg:inline-block lg:w-auto lg:px-10 lg:py-2.5"
             >
               我想參與創作 NFT
             </a>
@@ -367,7 +372,10 @@
           </div>
         </div>
       </div>
-      <div class="px-5 py-[50px] lg:py-20">
+      <div
+        id="type"
+        class="scrollspy scroll-m-10 px-5 py-[50px] lg:scroll-m-[75px] lg:py-20"
+      >
         <div class="lg:mx-auto lg:max-w-[1200px]">
           <div class="mb-[50px] text-[32px]">購票種類</div>
           <div
@@ -447,7 +455,10 @@
           </div>
         </div>
       </div>
-      <div class="bg-black px-5 py-[50px] lg:py-[100px]">
+      <div
+        id="related"
+        class="scrollspy scroll-m-10 bg-black px-5 py-[50px] lg:scroll-m-[75px] lg:py-[100px]"
+      >
         <div
           class="lg:mx-auto lg:grid lg:max-w-[1200px] lg:grid-cols-2 lg:items-center lg:gap-[30px]"
         >
@@ -541,7 +552,10 @@
           </a>
         </div>
       </div>
-      <div class="bg-black/50">
+      <div
+        id="partner"
+        class="scrollspy scroll-m-10 bg-black/50 lg:scroll-m-[75px]"
+      >
         <div
           class="space-y-[50px] py-[50px] px-5 lg:mx-auto lg:max-w-[1200px] lg:py-20"
         >
